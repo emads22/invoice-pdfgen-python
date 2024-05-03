@@ -1,10 +1,11 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 # Setup function call with package information
 setup(
-    name='pdf-invoicing',  # Package name
-    packages=['pdf_invoice'],  # List of packages
+    name='pdf_invoice',  # Package name
+    # Automatically find all packages and sub-packages within the directory
+    packages=find_packages(),
     version='1.0.0',  # Package version
     license='MIT',  # License type
     # Brief description
