@@ -10,8 +10,8 @@ __pycache__/
 # Ignore .vscode folder
 .vscode/
 
-# Ignore Package folder
-Package/
+# Ignore PyPI Package folder
+PyPI Package/
 
 # Ignore Test folder
 CHECK/

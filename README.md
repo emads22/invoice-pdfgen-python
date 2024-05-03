@@ -21,6 +21,8 @@ You can install the Invoice PDF Generator package via pip:
 pip install invoice_pdfgen
 ```
 
+For more information and usage instructions, visit the [PyPI page](https://pypi.org/project/invoice-pdfgen/).
+
 ## Usage
 
 To use the Invoice PDF Generator package, follow these steps:
