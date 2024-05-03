@@ -10,15 +10,9 @@ __pycache__/
 # Ignore .vscode folder
 .vscode/
 
-# Ignore Planning folder
-Planning/
-
-# Ignore Exercises folder
-Exercises/
-
-# Ignore Solution folder
-Solution/
+# Ignore Package folder
+Package/
 
 # Ignore Test folder
-Test/
+CHECK/
 
