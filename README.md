@@ -5,7 +5,6 @@
 The Invoice PDF Generator is a Python package designed to simplify the process of creating PDF invoices from Excel invoice data. With this package, you can quickly generate professional-looking invoices for your business needs.
 
 ## Features
-
 - **Easy to Use**: Generate PDF invoices with just a few lines of Python code.
 - **Customizable**: Customize the appearance of your invoices by specifying fonts, colors, and layouts.
 - **Excel Integration**: Read invoice data directly from Excel files, making it easy to manage and update invoice information.
@@ -13,8 +12,14 @@ The Invoice PDF Generator is a Python package designed to simplify the process o
 - **Logo Support**: Add your company logo to the invoice for branding purposes.
 - **Cross-Platform**: Works seamlessly on Windows, macOS, and Linux.
 
-## Installation
+## Technologies Used
+- **fpdf**: A library for creating PDF documents.
+- **openpyxl**: A library for reading and writing Excel files.
+- **pandas**: A data manipulation and analysis library.
+- **setuptools**: A package development and distribution library.
+- **twine**: A utility for publishing Python packages to PyPI.
 
+## Installation
 You can install the Invoice PDF Generator package via pip:
 
 ```bash
@@ -24,7 +29,6 @@ pip install invoice_pdfgen
 For more information and usage instructions, visit the [PyPI page](https://pypi.org/project/invoice-pdfgen/).
 
 ## Usage
-
 To use the Invoice PDF Generator package, follow these steps:
 
 1. Import the `PDFInvoiceGenerator` class from the package.
@@ -44,15 +48,12 @@ generator.generate()
 For more detailed usage instructions and examples, please refer to the [examples](./examples) directory.
 
 ## Documentation
-
 For more detailed documentation, including API references and usage examples, please visit the [documentation](./docs/index.md).
 
 ## Examples
-
 Check out the [examples](./examples) directory for usage examples of the Invoice PDF Generator package.
 
 ## Tests
-
 The tests for the package can be found in the [tests](./tests) directory. You can run the tests using your preferred testing framework.
 
 ## Contributing
