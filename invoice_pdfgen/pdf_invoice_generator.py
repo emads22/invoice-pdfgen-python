@@ -16,6 +16,7 @@ class PDFInvoiceGenerator(FPDF):
         logo_filepath (str): Path to the logo image file.
         output_directory (str): Path to the directory where the generated PDF will be saved. Default is "./output".
     """
+
     def __init__(self, excel_filepath, logo_filepath, output_directory="./output"):
         """
         Initialize the PDFInvoiceGenerator object.
@@ -58,27 +59,27 @@ class PDFInvoiceGenerator(FPDF):
         """
         filename = self.excel_filepath.stem
         invoice_nr, invoice_date = filename.split('-')
-        
+
         self.add_page()
 
         # Add invoice number
         self.set_font(**self.title_font)
         self.cell(w=self.title_cell_width, h=self.cell_height,
-                 txt=f'Invoice no. ', ln=0)
+                  txt=f'Invoice no. ', ln=0)
         self.set_font(**self.value_font)
         self.set_text_color(*self.data_color)
         self.cell(w=self.title_cell_width,
-                 h=self.cell_height, txt=invoice_nr, ln=1)
+                  h=self.cell_height, txt=invoice_nr, ln=1)
 
         # Add invoice date
         self.set_font(**self.title_font)
         self.set_text_color(*self.header_color)
         self.cell(w=self.title_cell_width,
-                 h=self.cell_height, txt=f'Date: ', ln=0)
+                  h=self.cell_height, txt=f'Date: ', ln=0)
         self.set_font(**self.value_font)
         self.set_text_color(*self.data_color)
         self.cell(w=self.title_cell_width,
-                 h=self.cell_height, txt=invoice_date, ln=1)
+                  h=self.cell_height, txt=invoice_date, ln=1)
         self.ln()
 
         # Add invoice data
@@ -101,7 +102,7 @@ class PDFInvoiceGenerator(FPDF):
         for header in headers:
             header_formatted = header.title().replace("_", " ")
             self.cell(w=self.cell_width, h=self.cell_height,
-                            txt=header_formatted, border=1)
+                      txt=header_formatted, border=1)
         self.ln()
 
         # Add data rows
@@ -110,7 +111,7 @@ class PDFInvoiceGenerator(FPDF):
         for _, row in df.iterrows():
             for column_data in row:
                 self.cell(w=self.cell_width, h=self.cell_height,
-                                txt=str(column_data), border=1)
+                          txt=str(column_data), border=1)
             self.ln()
 
         # Add total amount due
@@ -118,36 +119,25 @@ class PDFInvoiceGenerator(FPDF):
             if header == 'total_price':
                 total_sum = df[header].sum()
                 self.cell(w=self.cell_width, h=self.cell_height,
-                                txt=str(total_sum), border=1, ln=1)
+                          txt=str(total_sum), border=1, ln=1)
             else:
                 self.cell(w=self.cell_width,
-                                h=self.cell_height, txt="", border=0)
+                          h=self.cell_height, txt="", border=0)
         self.ln()
 
         # Add total amount due label and value
         self.set_font(**self.title_font)
         self.set_text_color(*self.header_color)
         self.cell(w=self.cell_width + 10, h=self.cell_height,
-                        txt=f'Total Amount Due:  ', ln=0)
+                  txt=f'Total Amount Due:  ', ln=0)
         self.set_font(**self.value_font)
         self.set_text_color(*self.data_color)
         self.cell(w=self.cell_width, h=self.cell_height,
-                        txt=f'${total_sum}', ln=1)
+                  txt=f'${total_sum}', ln=1)
 
         # Add signature and logo
         self.set_font(**self.header_font)
         self.set_text_color(*self.header_color)
         self.cell(w=self.signature_cell_width,
-                        h=self.cell_height, txt='HardCode E>')
+                  h=self.cell_height, txt='HardCode E>')
         self.image(str(self.logo_filepath), w=self.logo_width)
-
-
-if __name__ == "__main__":
-    try:
-        generator = PDFInvoiceGenerator(excel_filepath='./10003-2023.1.18.xlsx',
-                                        logo_filepath='./python.png')
-        generator.generate()
-        print("\n--- PDF invoice generated successfully ---\n")
-    except Exception as e:
-        print("\n--- Failure in generating PDF invoice: ---\n")
-        print(f"\nError message: {e}\n")
