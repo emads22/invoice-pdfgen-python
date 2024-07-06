@@ -2,6 +2,8 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/emads22/invoice-pdfgen-python/blob/main/LICENSE)
 
+![invoice_pdfgen_logo](./assets/images/invoice_pdfgen_logo.png)
+
 The Invoice PDF Generator is a Python package designed to simplify the process of creating PDF invoices from Excel invoice data. With this package, you can quickly generate professional-looking invoices for your business needs.
 
 ## Features
