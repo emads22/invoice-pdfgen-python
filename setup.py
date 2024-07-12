@@ -6,14 +6,14 @@ setup(
     name='invoice_pdfgen',  # Package name
     # Automatically find all packages and sub-packages within the directory
     packages=find_packages(),
-    version='1.0.0',  # Package version
+    version='1.0.1',  # Package version
     license='MIT',  # License type
     # Brief description
     description='This package can be used for generating PDF invoices from Excel invoices.',
     author='Emad S.',  # Author name
     author_email='emads@email.com',  # Author email
     url='https://example.com',  # Project URL
-    keywords=['invoice', 'excel', 'pdf'],  # Keywords for the package
+    keywords=['invoice', 'excel', 'pdf', 'invoice_pdf_gen', 'invoice_gen'],  # Keywords for the package
     install_requires=['fpdf', 'openpyxl', 'pandas'],  # Required dependencies
     classifiers=[  # Classifiers for the package
         'Development Status :: 3 - Alpha',  # Development status
