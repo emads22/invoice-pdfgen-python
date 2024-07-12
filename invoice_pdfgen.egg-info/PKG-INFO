@@ -1,3 +1,27 @@
+Metadata-Version: 2.1
+Name: invoice_pdfgen
+Version: 1.2.2
+Summary: This package can be used for generating PDF invoices from Excel invoices.
+Home-page: https://github.com/emads22/invoice-pdfgen-python
+Author: emads22
+Author-email: emadsaab222@gmail.com
+License: MIT
+Keywords: invoice,excel,pdf,invoice_pdf_gen,invoice_gen
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fpdf
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+
 # Invoice PDF Generator
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/emads22/invoice-pdfgen-python/blob/main/LICENSE)
