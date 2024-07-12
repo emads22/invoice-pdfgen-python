@@ -1,8 +1,14 @@
 # Ignore virtual environment
 **/.venv/
+.env
+venv/
+ENV/
+env/
 
 # Ignore Python bytecode
 **/__pycache__/
+*.py[cod]
+*$py.class
 
 # Ignore .env file 
 **/.env
@@ -10,9 +16,40 @@
 # Ignore .vscode folder
 **/.vscode/
 
-# Ignore PyPI Package folder
-PyPI Package/
+# Ignore IDE and editor folders
+.idea/
+*.swp
+*.swo
 
-# Ignore Test folder
-CHECK/
+# Ignore build and distribution directories
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
+# Ignore installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+
+# Ignore Planning folder
+Planning/
